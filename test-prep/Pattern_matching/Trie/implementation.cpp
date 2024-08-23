@@ -12,7 +12,7 @@ class Trie {
 public:
 node* root;
     Trie() {
-        root==new node();
+        root=new node();
     }
     
     void insert(string word) {
@@ -33,6 +33,7 @@ node* root;
         for(int i=0;i<word.length();i++){
         int index=word[i]-'a';
         if(curr->nxt[index]==NULL){
+            cout<<"searching="<<word[i]<<endl;
             return false;
         }
         curr=curr->nxt[index];
