@@ -2,8 +2,9 @@
 using namespace std;
 int main()
 {
-string s1,s2;
-cin>>s1>>s2;
-cout<<"len1="<<s1.length()<<" "<<"len2="<<s2.length()<<endl;
+vector<int> v={1,8};
+auto it=upper_bound(v.begin(),v.end(),5);
+int ind=distance(it,v.end())-1;
+cout<<ind<<endl;
 return 0;
 }
